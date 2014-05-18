@@ -1,11 +1,219 @@
-<html>
-    <head>
-        <title>
-            vvu
-        </title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Vlad Victor Ungureanu (vvu)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    
+    <!-- Fallback for NoScript -->
+    <noscript>
+    <style type="text/css">
+     body {
+        display: block;
+     }
+    </style>
+    </noscript>
+  
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
 
-    <body>
-        My homepage!
-    </body>
+  <body>
+    <section class="container">
+
+      <!-- Header -->
+      <header class="row-fluid">
+        <div class="title span7">
+          <img src="assets/img/profile2.jpg" title="That`s me!" alt="My Profile"/>
+          <h1><b>VLAD VICTOR UNGUREANU</b></h1>
+          <h2>Embedded Device Programmer</h2>
+        </div>
+        <div class="social offset1 span4">
+          <ul>
+            <li><i class="icon-home"></i> College Ring 4, 28759</li>
+            <li>Bremen, Germany</li>
+            <li><i class="icon-envelope-alt"></i> 
+              <a id="mail" href = "mailto:vvu@vdev.ro">
+                vvu@vdev.ro
+              </a>
+              </li>
+            <li>
+              <i class="icon-phone"></i> +40(766)-220-395
+            </li>
+            	<a href="https://github.com/ungureanuvladvictor"><i class="icon-github-sign"></i></a>
+              <a href="https://www.linkedin.com/pub/vlad-victor-ungureanu/48/262/11a" >
+                <i class="icon-linkedin-sign" ></i>
+              </a>
+            <a href="https://myskype.info/ungureanuvladvictor" ><i class="icon-skype" ></i></a>
+            <a href="https://plus.google.com/116488451283079970817" ><i class="icon-google-plus" ></i></a>
+          </li>
+          </ul>
+        </div>  
+      </header>
+
+      <!-- Welcome Text -->
+      <article class="row-fluid">
+        <header class="span3">
+          <h3>Summary</h3>
+        </header>
+        <div class="span9 ">
+          <p >I am an embedded systems programmer with a strong background of low-level programming and considerable experience in networks and protocols. I am passionate about developing and integrating new solutions that comply with end device specifications. I am keen to participate in the development of a long term project<br>
+        </div>
+      </article>
+
+      <!-- Skills -->
+      <article class="row-fluid">
+        <header class="span3">
+          <h3>Skills</h3>
+        </header>
+        <div class="span9">
+          <div class="row-fluid skills">
+            <ul class="span6">
+              <li><h4>Advanced knowledge</h4></li>
+              <li><strong>C</strong> - 3 years experience</li>
+              <li><strong>C++</strong> - 2 years experience</li>
+              <li><strong>Linux</strong> - Everyday user</li>
+            </ul>
+            <ul class="span6">
+              <li><h4>Intermediate / Basic Knowledge</h4></li>
+              <li><strong>Java</strong> - 1 year experience</li>
+              <li><strong>Ruby</strong> - 1 year experience</li>
+              <li><strong>SML</strong> - 1 year experience</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Work -->
+      <article class="row-fluid">
+        <header class="span3">
+          <h3>Work Experience</h3>
+        </header>
+        <div class="span9">
+          <h4>Student Researcher at CNDS Jacobs University</h4>
+          <h5>Computer Networks Research</h5>
+          <h5>Sept 2013 - Present</h5>
+          <pWorking on a system that gathers power consumption data from multiple Atmel development boards. All the boards are communicating over an 802.15.4 radio link.
+          </p>
+          <br>
+          
+          
+          <h4>Club’s Vice-President at Jacobs University</h4>
+          <h5>Computer Science Club</h5>
+          <h5>Aug 2013 - Present</h5>
+          <p>Presenting new students the concept of Internet of Things and engaging them into the Open Source community.
+          </p>
+          <br>
+          
+          
+          <h4>Google Summer of Code Student - BeagleBoard.org</h4>
+          <h5>May 2013 - Sept 2013</h5>
+          <p>I developed an Android app that communicates with a BeagleBoneBlack, allowing it to boot over USB. Upon boot, the Android device pushes a micro-kernel, which emulates a serial device. This is used to download the filesystem and full kernel image. Next, I ported this from Android to Linux. Development was done in Java (Android SDK), along with some C (patches to Android kernel, libusb, Linux-port).
+          </p>
+          <br>
+          
+
+          <h4>Embedded Developer at Electro Univers</h4>
+          <h5>Part-Time Job</h5>
+          <h5>Sept 2008 - Jun 2012</h5>
+          <p>I developed a diagnosis and recovery system for IP surveillance cameras in a closed network. I implemented a polling HTTP server and a Windows application which monitors the overall status of the cameras, providing alerts and recovery options. The server was implemented in C, while the Windows application was done in C#.
+          </p>
+          <br>
+
+          <h4>Developer for FFmpeg / Libav</h4>
+          <h5>Google Code-IN 2010</h5>
+          <h5>Nov 2009 - Jan 2010</h5>
+          <p>I worked on improving test coverage across FFmpeg/Libav codecs. My tests improved coverage from 20% to 60%. I also worked closely with codec maintainers to remove bugs related to playing corrupted files. All work was done in C.
+          </p>
+        </div>
+      </article>
+      
+      <!-- Education -->
+      <article class="row-fluid">
+        <header class="span3">
+          <h3>Education</h3>
+        </header>
+        <div class="span9">
+          <h4>Jacobs University Bremen</h4>
+          <h5>2012 - Present</h5>
+            <p>Bachelor of Science - Computer Science</p>
+          <h4>Colegiul National "Roman-Voda"</h4>
+          <h5>2008 - 2012</h5>
+          <p>Computer Science profile</p>
+          <p>Top student of the class</p>
+        </div>
+      </article>
+			<!-- Education -->
+      <article class="row-fluid">
+        <header class="span3">
+          <h3>Projects</h3>
+        </header>
+        <div class="span9">
+        <h4>jWakeUpCall</h4>
+            <p>As President of the Computer Science Club of Jacobs University Bremen I proposed a smart wake up call system that the students will use during the midterm and final periods. With interested members from the club we have designed the architecture of the system and are currently implementing it. The platform on which the system will run is an embedded Linux board made by BeagleBoard.org.</p>
+       
+          <h4>Mars Rover</h4>
+            <p>I developed and implemented an AI language for a Mars Rover simulator. The language is interpreted on the client, which sends commands to the rover over the network, guiding it around obstacles. Programming was done in C++.</p>
+          <h4>CLAM</h4>
+            <p>I developed a system that aides an instructor with quiz administration. Quizzes and account information are stored on the server, while a client application (Windows/Linux) is used to login and perform actions. Students can take quizzes, view results, while instructors have more privileges. The grading is done automatically by the software. This project was done during the Introduction to Information Systems course and the implementation was done in Ruby.</p>
+           </div>
+      </article>
+
+
+
+      <!-- Interests -->
+      <article class="row-fluid">
+        <header class="span3">
+          <h3>Hobbies</h3>
+        </header>
+        <div class="span9">
+          <h4>Tweaking electronics</h4>
+          <h4>The Internet of Things</h4>
+          <h4>Free Open Source Software</h4>
+          <h4>Robotics</h4>
+          
+        </div>
+        
+      
+      <!-- Footer -->
+      <footer>
+        &copy; 2014 Vlad Victor Ungureanu 
+        <a href="cv.pdf">Download as PDF</a> | <a href="#top">To top <i class="icon-arrow-up"></i></a>
+      </footer>
+  </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+  </body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31196850-1']);
+  _gaq.push(['_setDomainName', 'vdev.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </html>

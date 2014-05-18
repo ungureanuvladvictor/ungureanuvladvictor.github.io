@@ -1,0 +1,170 @@
+%%% LaTeX Template: Curriculum Vitae
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com.
+%%% Date: July 2011
+
+%%% ------------------------------------------------------------
+%%% BEGIN PREAMBLE
+%%% ------------------------------------------------------------
+\documentclass[fontsize=11pt]{scrartcl}	 			% KOMA-article class
+\usepackage{geometry}
+\geometry{a4paper, top=.5cm, left=0.8cm, right=.8cm, bottom=0cm}
+\usepackage{multicol}
+					
+%\usepackage[english]{babel}								% English language/hyphenation
+%\usepackage[protrusion=true,expansion=true]{microtype}		% Better typography
+\usepackage{amsmath,amsfonts,amsthm}					% Math packages
+\usepackage[pdftex]{graphicx}								% Enable pdflatex
+\usepackage[svgnames]{xcolor}							% Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700mm									% Saving trees ;-) 
+\usepackage{hyperref}
+									% Clickable URL's
+\usepackage{wrapfig}									% Wrap text along figures
+
+\frenchspacing									% Better looking spacings after periods
+\pagestyle{empty}								% No pagenumbers/headers/footers
+%\usepackage{bbding}									% Symbols
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}							% Custom sectioning (see below)
+
+\sectionfont{%									% Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%					% bch-b-n: CharterBT-Bold font
+	%\sectionrule{0pt}{0pt}{-5pt}{3pt}
+	}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}				% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}			% Vertical space macro
+
+\newlength{\spaceboxSkills}
+\settowidth{\spaceboxSkills}{88888888888888888888888888}				% Box to align text
+\newcommand{\sepspaceSkills}{\vspace*{0em}}			% Vertical space macro
+
+\newcommand{\MyName}[1]{
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1 		% Name
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1} % Slogan (optional)
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}\vspace{1mm}\hrule height 1.2pt}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=1em\hangafter=1 		% Indentation
+		\parbox{\spacebox}{						% Box to align text
+		\textit{#1}}								% Entry name (birth, address, etc.)
+		\hspace{-.1em} #2 \par}					% Entry value
+
+\newcommand{\SkillsEntry}[2]{						% Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=1 		% Indentation
+		\parbox{\spaceboxSkills}{						% Box to align text
+		\textit{#1}}								% Entry name (birth, address, etc.)
+		\hspace{-1em} #2 \par}					% Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill \\					% Study
+		\noindent \textit{#3} \par\par					% School
+		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
+		\normalsize \par}
+
+\newcommand{\ProjectEntry}[4]{
+		\noindent \textbf{#1} \hfill \\					% Study
+		\noindent {#3} \par\par					% School
+		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{						% Same as \EducationEntry
+		\noindent \textbf{#1} \hfill 					% Jobname
+		\textbf{\color{Black}#2} \par		% Duration
+		\noindent \textit{#3} \par					% Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
+		\normalsize \par}
+
+
+
+%%% ------------------------------------------------------------
+%%% BEGIN DOCUMENT
+%%% ------------------------------------------------------------
+\begin{document}
+
+\MyName{Vlad Victor Ungureanu}
+\MySlogan{Embedded Device Programmer}
+
+\begin{multicols}{2}
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+\PersonalEntry{Address}{College Ring 4, 28759 Bremen, Germany}
+\PersonalEntry{Phone}{(+40) 766-220395}
+\PersonalEntry{Mail}{\href{mailto:ungureanuvladvictor@gmail.com}{ungureanuvladvictor@gmail.com}}
+\PersonalEntry{Website}{\href{http://vdev.ro/}{http://vdev.ro}}
+\PersonalEntry{GitHub}{\href{http://github.com/ungureanuvladvictor}{http://github.com/ungureanuvladvictor}}
+
+\columnbreak
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{} 
+
+\EducationEntry{BSc. Computer Science, Aug 2012 - Present}{Aug 2012 - Present}{Jacobs University Bremen}{}
+%\sepspace
+
+\EducationEntry{High School Diploma , Sept 2008 - Jun 2012}{Sept 2008 - Jun 2012}{Colegiul National Roman Voda}{}
+
+\end{multicols}
+
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Work experience}{}
+
+\WorkEntry{Student Researcher}{Aug 2013 - Present}{Computer Networks and Distributed Systems Jacobs University}{Working on a system that gathers power consumption data from multiple Atmel development boards. All the boards are communicating over an 802.15.4 radio link.}
+\sepspace
+
+\WorkEntry{Embedded Developer}{Jun 2013 - Sept 2013}{BeagleBoard.org, Google Summer of Code 2013 Student}{I developed an Android app that communicates with a BeagleBoneBlack, allowing it to boot over USB. Upon boot, the Android device pushes a micro-kernel, which emulates a serial device. This is used to download the filesystem and full kernel image. Next, I ported this from Android to Linux. Development was done in Java (Android SDK), along with some C (patches to Android kernel, libusb, Linux-port).}
+\sepspace
+
+\WorkEntry{Embedded Developer}{Sept 2008 - Jun 2012}{Electro Univers, Part-Time}{I developed a diagnosis and recovery system for IP surveillance cameras in a closed network. I implemented a polling HTTP server and a Windows application which monitors the overall status of the cameras, providing alerts and recovery options. The server was implemented in C, while the Windows application was done in C\#.}
+\sepspace
+
+\WorkEntry{Software Developer and Tester}{Nov 2009 - Jan 2010}{FFmpeg/Libav, Google Code-IN 2010 Student}{I worked on improving test coverage across FFmpeg/Libav codecs. My tests improved coverage from 20\% to 60\%. I also worked closely with codec maintainers to remove bugs related to playing corrupted files. All work was done in C.}
+\begin{multicols}{2}
+\begin{minipage}[t]{\columnwidth}
+\NewPart{Computer Skills}{}
+\SkillsEntry{Advanced Knowledge}{C, C++, Linux}
+\SkillsEntry{Intermediate Knowledge}{Java, Ruby, SML}
+\SkillsEntry{Basic Knowledge}{Bash, PHP, MySQL}
+\NewPart{Awards}{}
+\begin{tabular}{rl}
+2011 & \textbf{4$^{th}$ place in Cisco Contest}\\
+& \textit{Romania Team Participant,\ Europe}\\ 
+2010 & \textbf{1$^{st}$ place in Cisco AcadNet Contest }\\
+& \textit{Computer Networks Section,\ Romania}\\
+2009 & \textbf{2$^{nd}$ place in Cisco AcadNet Contest}\\
+& \textit{Computer Hardware Section,\ Romania}\\
+\end{tabular}
+
+\NewPart{Hobbies}{}
+Hiking\\
+Tweaking Electronics\\
+Contributing to Open Source Software
+
+\end{minipage}
+\columnbreak
+
+\begin{minipage}[t]{\columnwidth}
+
+\NewPart{Projects}{}
+\ProjectEntry{Mars Rover}{}{I developed and implemented an AI language for a Mars Rover simulator. The language is interpreted on the client, which sends commands to the rover over the network, guiding it around obstacles. Programming was done in C++.}{}
+\ProjectEntry{CLAM}{}{I developed a system that aides an instructor with quiz administration. Quizzes and account information are stored on the server, while a client application (Windows/Linux) is used to login and perform actions. Students can take quizzes, view results, while instructors have more privileges. The grading is done automatically by the software. This project was done during the \\Introduction to Information Systems course and the \\implementation was done in Ruby.}{}
+\vspace{-4000mm}
+
+\end{minipage}
+
+\end{multicols}
+\end{document}
