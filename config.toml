@@ -1,0 +1,17 @@
+languageCode = "en-us"
+title = "Vlad Ungureanu"
+baseURL = "https://vladu.dev/"
+theme = "hugo-geekdoc"
+publishDir = "public"
+enableemoji = true
+
+# Geekdoc required configuration
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+disablePathToLower = true
+enableGitInfo = false
+
+[params]
+Author = "Vlad Ungureanu"
+geekdocToC = 3
+geekdocSearch = false
